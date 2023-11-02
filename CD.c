@@ -21,7 +21,6 @@ void cd(char* str, char main_dir[1000],int i )
         // printf("\n");
     }
     
-
     else if(strcmp(str+i,"-")==0){     
         
         getcwd(curr_dir,sizeof(curr_dir));
@@ -35,9 +34,10 @@ void cd(char* str, char main_dir[1000],int i )
         strcpy(prev_dir,curr_dir);
         printf("\n");
     }
-    // else if (str+i == 0) ;
+    else if (strlen(str) == i) ;
     else if(str+i !=""){
-        // printf("%d\n",str+i);
+        // printf("%d\n",i);
+        // printf("%ld\n",strlen(str));
         getcwd(prev_dir,sizeof(prev_dir));
         int stat=chdir(str+i);
     

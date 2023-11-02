@@ -1,5 +1,5 @@
 #include "header.h" 
- 
+
 void display(char main_dir[1000]){
 
     char sys_name[100],user_name[100],disp_dir[1000];

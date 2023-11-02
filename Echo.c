@@ -30,7 +30,7 @@
 
 void Echo(char str[], int i){
     i = i+4;
-    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+    while (str[i] == ' ' || str[i] == '\t')
     {
         i++;
     }
@@ -48,6 +48,17 @@ void Echo(char str[], int i){
         while(str[ix]!=34){
             printf("%c",str[ix]);
             ix++;
+        }
+        ix++;
+        // printf("\n");
+        if(ix < strlen(str)){
+            const char s[2] = " ";
+            char *token;
+            token = strtok(str+ix, s);
+            while( token != NULL ) { 
+                printf( " %s", token ); 
+                token = strtok(NULL, s); 
+            }
         }
 
     }

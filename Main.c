@@ -9,12 +9,12 @@
 int main(){
     char main_dir[1000],str[99999];
     getcwd(main_dir, sizeof(main_dir));
-    
+    // printf(" hi\n");
     while(1){
         display(main_dir);
         scanf("%[^\n]%*c", str);
         int i = 0;
-        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+        while (str[i] == ' ' || str[i] == '\t')
         {
             i++;
         }
@@ -28,11 +28,14 @@ int main(){
         else if(str[i]== 'c' && str[i+1]== 'd'){
             cd(str,main_dir,i);
         }
+        // else if(str[i] == 0);
         else{
-            printf("error\n");
-            break;
+            printf("%s : command not found\n",str);
+            // perror("");
+            // break;
 
         }
+        // if(str == )
         // printf("\n");
     }
 }
